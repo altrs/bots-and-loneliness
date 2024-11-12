@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Kite+One&display=swap');
+
+
+body{
+	background-color: #ECEAE6;
+	font-family: "Kite One", sans-serif;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#main-title {
+  font-size: 45px;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+.news{
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.news-headliners{
+  width: 25%;
+  margin: 20px;
+  border: 1px solid;
+  padding: 20px;
+  overflow: scroll;
+}
+
+.headliners {
+	height: 80vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	opacity: 0;
+	transform: translateX(-50px); /* Start from the left */
+	transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.headliners h2,
+.headliners h3,
+.headliners h4 {
+  width: 50%;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.headliners.show {
+  opacity: 1;
+  transform: translateX(0); /* Slide to original position */
+}
+
+svg {
+    border: 1.5px solid black;
+    border-radius: 15px; /* Adjust as needed for rounding */
+    padding: 10px;
+}
+
+.fade-text{
+  opacity: 0;
+}
+
+#images{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Make the container the positioning context for the images */
+  overflow: hidden; /* Ensure no scrollbars appear */
+}
+
+#images img {
+  position: absolute; /* Position images absolutely inside the container */
+  max-width: 400px; /* Optional: Set max size for images */
+  max-height: 300px; /* Optional: Set max height for images */
+  opacity: 0; /* Initially set images to be invisible */
+  transition: opacity 1s ease-in-out; /* Fade-in effect */
+}
+
+
+/*CHATBOT TIMELINE*/
+
+/*.timeline{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.timeline h3,
+.timeline h4 {
+  width: 50%;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.timeline h4 {
+	margin-bottom: 200px;
+}
+*/
+
+
